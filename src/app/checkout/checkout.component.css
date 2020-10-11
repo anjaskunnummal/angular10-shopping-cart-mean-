@@ -1,0 +1,30 @@
+.checkout-header{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+.controlers-wrapper .example-full-width {
+    width: 90%;
+    padding-left:0.65rem;
+  }
+  
+.inner-wrapper {
+    width: 100%;
+  }
+.inner-wrapper mat-card {
+    width: 100%;
+  }
+  .partition{
+      padding-left: 0.65rem;
+  }
+  button{
+      background-color: whitesmoke;
+      outline: none;
+  }
+
+  @media (max-width:767px){
+      .partition{
+          width: 40%;
+      }
+  }

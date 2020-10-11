@@ -1,0 +1,80 @@
+<!--<h1>{{demo}}</h1>
+<h2 *ngFor="let product of products">
+    <h3>{{product.name}}</h3>
+    <img src="http://localhost:3000/images/{{product.Image}}.jpg">
+</h2>-->
+<mat-toolbar color="primary" class="header" >
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon  (click)="sidenav.toggle()" class="navicon">menu</mat-icon>
+    </button>
+    
+    <i class="fas fa-shopping-bag"></i>
+      <span style="padding-left: 0.3rem;">ShopDo</span>
+      <!--<input type="search" *ngIf="display" placeholder="Search for Products,Brands and More">-->
+      <input  *ngIf="display"  [formControl]="control" type="text"placeholder="Search for Products,Brands and More"
+        matInput [matAutocomplete]="auto">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let value of SearchValues | async" [value]="value.name">
+              {{value.name}}
+            </mat-option>
+          </mat-autocomplete>
+     
+
+
+      <span class="example-spacer"></span>
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" style="padding-right:3rem;">
+                <mat-icon *ngIf="close_icon" (click)="close()">close</mat-icon>
+                <i (click)="searching()" *ngIf="search_icon" class="fas fa-search fa-2x"></i>
+          </button>
+          <button *ngIf="nav_icon" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                <i matBadge="{{cartcount}}" matBadgeColor="accent" [routerLink]="['/cart']" class="fas fa-shopping-cart fa-2x" style="outline: none;"></i>
+          </button>
+</mat-toolbar>
+
+  
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
+      [fixedTopGap]>
+      <mat-nav-list>
+        <a mat-list-item  *ngIf = "authservice.currentUser" routerLinkActive="active" routerLink="/home" style="color: white;">
+          <mat-icon>sentiment_very_satisfied</mat-icon>
+          {{authservice.currentUserName}}
+        </a>
+        <a mat-list-item routerLinkActive="active" routerLink="/home" style="color: white;">
+          <mat-icon>home</mat-icon>
+          Home
+        </a>
+        <a mat-list-item routerLinkActive="active" routerLink="/"  style="color: white;">
+          <mat-icon>ballot</mat-icon>
+        All Categories
+        </a>
+        <a mat-list-item routerLinkActive="active" routerLink="/"  style="color: white;">
+          <mat-icon>loyalty</mat-icon>
+            My Orders
+          </a>
+          <a mat-list-item routerLinkActive="active" routerLink="/cart"  style="color: white;">
+            <mat-icon>shopping_cart</mat-icon>
+           My Cart
+            </a>
+            <a mat-list-item routerLinkActive="active" routerLink="/my-account"  style="color: white;">
+              <mat-icon>account_circle</mat-icon>
+           My Account
+              </a>
+              <a mat-list-item routerLinkActive="active" routerLink="/"  style="color: white;">
+                <mat-icon>help</mat-icon>
+                  Help
+                 </a>
+                 <a mat-list-item href="#" *ngIf = "authservice.currentUser" (click)="authservice.Logout()" style="color: white;">
+                  <mat-icon>settings_power</mat-icon>
+                    Logout
+                  </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

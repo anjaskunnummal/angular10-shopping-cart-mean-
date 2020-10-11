@@ -1,0 +1,116 @@
+<h1 style="color: white;font: outline;margin-top: 2rem;">Furnish Your Home..</h1>
+
+<div class="wrapper">
+  <div class="box a">
+    <ngb-carousel >
+      <ng-template ngbSlide *ngFor="let image of images">
+        <div class="picsum-img-wrapper">
+          <img class="im1" src="{{image}}" alt="Random first slide">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div class="box b">
+    <img class="im2" src="https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+  </div>
+  <div class="box c">
+    <img class="im3" src="https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+  </div>
+  <div class="box d">
+    <img class="im4" src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+  </div>
+</div>
+
+<style>
+  
+.wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3,1fr);
+    }
+  
+    .im1{
+      width: 650px;
+      background-position: center;
+    }
+    .im2{
+      width: 380px;
+      height: 410px;
+    }
+    .im3{
+      width: 320px;
+    }
+    .im4{
+      width: 320px;
+    }
+    img{
+      height: 200px;
+      width: 300px;
+    }
+
+    .a {
+        width: 650px;
+        grid-column: 1 / span 2;
+    }
+    .b {
+        grid-column: 3 ;
+        grid-row: 1 / span 2;
+       
+    }
+    .c {
+        grid-column: 1 ;
+        grid-row: 2 ;
+    }
+    .d {
+        grid-column: 2 ;
+        grid-row: 2 ;
+    }
+
+
+
+    @media (max-width: 767px) {
+      .wrapper {
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(3,1fr);
+    }
+  
+    .im1{
+      width: 210px;
+    }
+    .im2{
+      width: 100px;
+      height: 207px;
+    }
+    .im3{
+      width: 100px;
+    }
+    .im4{
+      width: 100px;
+    }
+    img{
+      height: 100px;
+      width: 200px;
+     
+    }
+
+    .a {
+        width: 210px;
+        grid-column: 1 / span 2;
+    }
+    .b {
+        grid-column: 3 ;
+        grid-row: 1 / span 2;
+       
+    }
+    .c {
+        grid-column: 1 ;
+        grid-row: 2 ;
+    }
+    .d {
+        grid-column: 2 ;
+        grid-row: 2 ;
+    }
+     
+      }
+</style>

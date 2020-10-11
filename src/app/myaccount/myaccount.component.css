@@ -1,0 +1,35 @@
+.text-profile{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.account{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+img{
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    box-shadow: 8px 6px ;
+     border-radius: 25rem;
+    
+}
+.profile-grid{
+    display: grid;
+    grid-gap: 30px;
+    margin-bottom: 2rem;
+    grid-template-columns: repeat(2,1fr);
+   
+
+}
+.grid-cont{
+    background-color: white;
+    color:#c2185b;
+    font-weight: bold;
+    border: 5px solid #c2185b;
+    display: block;
+    box-shadow: 8px 10px 2px 2px #212529;
+    text-align: center;
+}

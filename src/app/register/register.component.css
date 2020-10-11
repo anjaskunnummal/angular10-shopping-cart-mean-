@@ -1,0 +1,15 @@
+button{
+    
+    outline: none;
+}
+.register-container{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-bottom: 60px;
+}
+.register-container-head{
+    display: flex;
+    justify-content: center;
+    color: white;
+}

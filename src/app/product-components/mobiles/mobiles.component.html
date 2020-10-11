@@ -1,0 +1,56 @@
+<h2>Purchase Your Mobile From Here...</h2>
+<mat-card>
+  <div class="card-grid">
+  <div *ngFor="let product of products">
+  <img  src="http://localhost:3000/images/{{product.Image}}.jpg" alt="">
+  <mat-card-content>
+    <p>
+     {{product.name}}
+    </p>
+    <br>
+    <p>{{product.price | currency:'INR'}}</p>
+    <br>
+    <p>{{product.description}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="warn" (click)="OnAddCart(product)" >Add to Cart</button>
+    
+  </mat-card-actions>
+</div>
+</div>
+</mat-card>
+
+<style>
+
+  .card-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    text-align: center;
+    border-radius: 5px solid white;
+  
+  }
+  img{
+    width: 300px;
+    height: 200px;
+  }
+  h2{
+    color: white;
+    font-weight: bold;
+  }
+     button{
+    outline: none;
+  }
+  @media (max-width: 767px){
+    .card-grid{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    img{
+      width: 140px;
+      height: 200px;
+    }
+  }
+
+</style>
+

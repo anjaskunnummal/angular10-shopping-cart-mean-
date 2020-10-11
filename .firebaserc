@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "shopdo-project": {
+      "hosting": {
+        "test": [
+          "shopdo-project"
+        ]
+      }
+    }
+  }
+}

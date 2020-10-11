@@ -1,0 +1,20 @@
+<h1 style="color: white;font: outline;margin-top: 2rem;">Hey!Shop From Here..</h1>
+<div class="product_grid">
+  <div *ngFor="let prod of productImages" class="item-grid">
+    <img src="{{ prod.image}}" [routerLink]="prod.routerLink" >
+    <h4>{{ prod.name}}</h4>
+  </div>
+</div>
+
+<h1 style="color: white;font: outline;margin-top: 2rem;">Styles For Men | Up To 70% Off..</h1>
+<div class="men-grid">
+  <div *ngFor="let items of menitems" class="men-item">
+    <img src="{{items.image}}" alt="">
+    <h4>{{items.name}}</h4>
+  </div>
+ 
+</div>
+<app-grid style="margin: 3rem;"></app-grid>
+
+
+

@@ -1,0 +1,40 @@
+[{
+    "id":1,
+    "name":"Jean shirt",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo quia dolorum porro maiores",
+    "price":2299,
+    "Image":"fash2"
+  },
+{
+  "id":2,
+  "name":"Makeup box",
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo quia dolorum porro maiores",
+  "price":1549,
+  "Image":"fash4"
+
+},
+{
+  "id":3,
+  "name":"Face cleaner",
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo quia dolorum porro maiores",
+  "price":1090,
+  "Image":"fash1"
+
+},
+{
+  "id":4,
+  "name":"T-shirt combo",
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo quia dolorum porro maiores",
+  "Image":"fash5",
+  "price":2599
+ 
+
+},
+{
+  "id":5,
+  "name":"T-shirt for men",
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo quia dolorum porro maiores",
+  "price":999,
+  "Image":"fash6"
+
+}]

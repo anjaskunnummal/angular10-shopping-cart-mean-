@@ -1,0 +1,45 @@
+[{
+    "id":1,
+    "name":"Samsung Galaxy S20",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo quia dolorum porro maiores",
+    "price":112999,
+    "quantity":1,
+    "Image":"mob6"
+  },
+{
+  "id":2,
+  "name":"Iphone 11pro",
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo quia dolorum porro maiores",
+  "price":115499,
+  "quantity":1,
+  "Image":"mob2"
+
+},
+{
+  "id":3,
+  "name":"Realme xpro",
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo quia dolorum porro maiores",
+  "price":25990,
+  "quantity":1,
+  "Image":"mob3"
+
+},
+{
+  "id":4,
+  "name":"Iphone 5",
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo quia dolorum porro maiores",
+  "Image":"mob4",
+  "quantity":1,
+  "price":21599
+ 
+
+},
+{
+  "id":5,
+  "name":"Poco F2",
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo quia dolorum porro maiores",
+  "price":18999,
+  "quantity":1,
+  "Image":"mob5"
+
+}]

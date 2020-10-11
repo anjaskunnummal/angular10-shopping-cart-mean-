@@ -1,0 +1,75 @@
+<div class="checkout-header" *ngIf="show">
+    <h3>CHECKOUT</h3>
+</div>
+
+<div class="inner-wrapper" *ngIf="show">
+    <form [formGroup]="checkoutform" (ngSubmit)="SubmitCheckoutForm()" #resetcheckoutform="ngForm" novalidate>
+        <mat-card>
+            <div class="controlers-wrapper">
+                <mat-form-field  class="partition">
+                    <input matInput placeholder="First Name*" formControlName="first_name">
+                    <mat-error *ngIf="handleError('first_name', 'required')">
+                        You must provide a<strong> name</strong>
+                      </mat-error>
+                </mat-form-field>
+
+                <mat-form-filed  class="partition">
+                    <input matInput placeholder="Last Name" formControlName="last_name">
+                </mat-form-filed>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Email" formControlName="email">
+                    <mat-error *ngIf="handleError('email','required')">
+                        Please provide a valid Email
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="partition">
+                    <input matInput placeholder="House Name" formControlName="house_name">
+                </mat-form-field>
+
+                <mat-form-field class="partition">
+                    <input matInput placeholder="Pincode"  formControlName="pincode" >
+                    <mat-error *ngIf="handleError('pincode','required')">
+                        Please Provide Pincode
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="RoadName,Area,Colony"  formControlName="correct_location">
+                    <mat-error *ngIf="handleError('correct_location','required')">
+                        Please Provide Roadname,colony,area
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="partition">
+                    <input matInput placeholder="City"  formControlName="city">
+                    <mat-error *ngIf="handleError('city','required')">
+                        Please Provide city
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="partition">
+                    <input matInput placeholder="State"  formControlName="state" >
+                    <mat-error *ngIf="handleError('state','required')">
+                        Please Provide state
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Phonenumber"  formControlName="phone_number">
+                    <mat-error *ngIf="handleError('phone_number','required')">
+                        Please Provide phonenumber
+                    </mat-error>
+                </mat-form-field>
+                
+            </div>
+        </mat-card>
+        <div class="checkout-header">
+            <button mat-button color="warn">Save & Continue</button>
+          </div>
+    </form>
+</div>
+
+<app-checkoutinfo *ngIf="display"></app-checkoutinfo>
+
+

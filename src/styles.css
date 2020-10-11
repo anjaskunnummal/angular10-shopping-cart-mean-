@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+::-webkit-scrollbar {
+    display: none;
+}
+html, body { height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif}
+/* You can add global styles to this file, and also import other style files */
+
+.product_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 1.2rem;
+
+  }
+  .item-grid{
+      display: block;
+      border:5px solid white;
+      width: 310px;
+      height: 209px;
+      text-align: center;
+      background-color: white;
+      color: white;
+      font-weight: bold;
+     
+  }
+  .item-grid > img{
+    width: 300px;
+    background-position: center;
+    background-size: cover;
+   
+  }
+  .men-grid{
+    display: grid;
+    grid-template-columns: repeat(6, calc(40% - 10px));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+    height: 320px;
+    background-color: white;
+  }
+  .men-item{
+  text-align: center;
+  }
+
+
+  .men-item > img{
+    width: 400px;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 0px 10px 10px;
+  }
+  .men-item >h4{
+    font-weight: bold;
+ 
+  }
+ 
+  @media (max-width: 767px) {
+      .product_grid{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          grid-gap: 1rem;
+      }
+      .item-grid{
+        color: white;
+      font-weight: bold;
+        width: 153px;
+        height: 105px;
+    }
+      .item-grid > img{
+        width: 145px;
+      
+        background-position: center;
+        background-size: cover;
+      }
+      .men-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: white;
+        height: 310px;
+      }
+      .men-item > img{
+        width: 150px;
+        background-position: center;
+        background-size: cover;
+        padding: 10px 0px 10px 2px;
+      }
+      
+    }
+  

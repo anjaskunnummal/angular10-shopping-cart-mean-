@@ -1,0 +1,29 @@
+<div>
+<h3 class="content">PAYMENT SECTION</h3>
+<mat-card>
+        <mat-list role="list" class="content" *ngFor="let item of productfromcart">
+            <mat-list>
+                <mat-list-item>Name:{{item.name}}</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>Total Amount:{{item.price | currency:"INR"}}</mat-list-item>
+              </mat-list>
+          </mat-list>
+</mat-card>
+<mat-card >
+        <h2>ADDRESS</h2>
+          <div role="list" *ngFor="let address of AddressArray">
+            <p>{{address.first_name}}<span style="padding: 0.3rem;">{{address.last_name}}</span></p>
+            <p>{{address.house_name}},{{address.pincode}}</p>
+            <p>{{address.email}}</p>
+            <p>{{address.correct_location}}</p>
+            <p>{{address.city}},{{address.state}}</p>
+            <p>{{address.phone_number}}</p>
+        </div>
+</mat-card>
+
+<div class="content">
+   <a href="https://www.sbiyono.sbi/wps/portal/login" target="_blank" >
+    <button mat-button color="warn">Proceed to payment</button> </a> 
+  </div>
+</div>
+
