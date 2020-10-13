@@ -20,6 +20,11 @@ mongoose.connect(process.env.MONGO_URL||dataBaseConfig.db, {
 const products = require ('./routes/products')
 //const dataPath = "./data/data.json";
 const app = express();
+///////////////////////////////////////
+// Create link to Angular build directory
+/*var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));*/
+///////////////////////////////////////
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

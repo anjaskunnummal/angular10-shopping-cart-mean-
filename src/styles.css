@@ -9,32 +9,29 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif}
 .product_grid{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    grid-gap: 1.2rem;
-
+    grid-gap: 0.7rem;
+    width: 100%;
   }
   .item-grid{
       display: block;
-      border:5px solid white;
-      width: 310px;
-      height: 209px;
+      width: 100%;
       text-align: center;
-      background-color: white;
       color: white;
       font-weight: bold;
      
   }
   .item-grid > img{
-    width: 300px;
+    width: 100%;
+    border:5px solid white;
     background-position: center;
     background-size: cover;
    
   }
   .men-grid{
     display: grid;
-    grid-template-columns: repeat(6, calc(40% - 10px));
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-    height: 320px;
+    grid-template-columns: repeat(6, calc(30% - 8px));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     background-color: white;
   }
   .men-item{
@@ -43,46 +40,32 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif}
 
 
   .men-item > img{
-    width: 400px;
+    width: 300px;
     background-position: center;
     background-size: cover;
-    padding: 10px 0px 10px 10px;
+    border-radius: 70px;
+    padding-top: 10px ;
   }
   .men-item >h4{
     font-weight: bold;
  
   }
  
-  @media (max-width: 767px) {
+  @media (max-width: 769px) {
       .product_grid{
-          display: grid;
           grid-template-columns: repeat(2,1fr);
-          grid-gap: 1rem;
+          grid-gap: 0.4rem;
       }
-      .item-grid{
-        color: white;
-      font-weight: bold;
-        width: 153px;
-        height: 105px;
-    }
-      .item-grid > img{
-        width: 145px;
       
-        background-position: center;
-        background-size: cover;
-      }
       .men-grid{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         background-color: white;
-        height: 310px;
       }
       .men-item > img{
         width: 150px;
         background-position: center;
         background-size: cover;
-        padding: 10px 0px 10px 2px;
       }
-      
     }
   

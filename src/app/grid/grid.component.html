@@ -1,7 +1,6 @@
 <h1 style="color: white;font: outline;margin-top: 2rem;">Furnish Your Home..</h1>
 
 <div class="wrapper">
-  <div class="box a">
     <ngb-carousel >
       <ng-template ngbSlide *ngFor="let image of images">
         <div class="picsum-img-wrapper">
@@ -9,108 +8,83 @@
         </div>
       </ng-template>
     </ngb-carousel>
-  </div>
-  <div class="box b">
-    <img class="im2" src="https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-  </div>
-  <div class="box c">
-    <img class="im3" src="https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-  </div>
-  <div class="box d">
-    <img class="im4" src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
-  </div>
+    <div class="boxb">
+      <img class="im2" src="https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+    </div>
+</div>
+<div class="flexlower">
+    <div class="boxc">
+      <img class="im3" src="https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+    </div>
+    <div class="boxd">
+      <img class="im4" src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+    </div>
 </div>
 
 <style>
-  
-.wrapper {
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: repeat(3,1fr);
-    }
-  
-    .im1{
-      width: 650px;
-      background-position: center;
-    }
-    .im2{
-      width: 380px;
-      height: 410px;
-    }
-    .im3{
-      width: 320px;
-    }
-    .im4{
-      width: 320px;
-    }
-    img{
-      height: 200px;
-      width: 300px;
-    }
-
-    .a {
-        width: 650px;
-        grid-column: 1 / span 2;
-    }
-    .b {
-        grid-column: 3 ;
-        grid-row: 1 / span 2;
-       
-    }
-    .c {
-        grid-column: 1 ;
-        grid-row: 2 ;
-    }
-    .d {
-        grid-column: 2 ;
-        grid-row: 2 ;
-    }
+ .wrapper{
+display: flex;
+justify-content: space-evenly;
+height: 250px;
+}
+.flexlower{
+display: flex;
+justify-content: space-evenly;
+height: 250px;
+padding-top: 0.8rem;
+}
+ ngb-carousel{
+  width: 70%;
+ }
+ .im1{
+   height: 250px;
+   width: 100%;
+ }
+ .boxb{
+   width: 30%;
+   padding-left: 0.8rem;
+ }
+ .boxc{
+   width: 50%;
+ }
+ .im3{
+   width: 100%;
+ }
+ .boxd{
+   padding-left: 0.8rem;
+   width: 50%;
+ }
+img{
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+}
 
 
-
-    @media (max-width: 767px) {
-      .wrapper {
-        display: grid;
-        grid-gap: 3px;
-        grid-template-columns: repeat(3,1fr);
-    }
-  
-    .im1{
-      width: 210px;
-    }
-    .im2{
-      width: 100px;
-      height: 207px;
-    }
-    .im3{
-      width: 100px;
-    }
-    .im4{
-      width: 100px;
-    }
-    img{
-      height: 100px;
-      width: 200px;
-     
-    }
-
-    .a {
-        width: 210px;
-        grid-column: 1 / span 2;
-    }
-    .b {
-        grid-column: 3 ;
-        grid-row: 1 / span 2;
-       
-    }
-    .c {
-        grid-column: 1 ;
-        grid-row: 2 ;
-    }
-    .d {
-        grid-column: 2 ;
-        grid-row: 2 ;
-    }
-     
-      }
+@media (max-width: 767px) {
+  .wrapper{
+height: 150px;
+}
+.im1{
+  width: 100%;
+  height: 150px;
+}
+img{
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.flexlower{
+  margin-bottom: -5rem;
+  padding-top: 0.4rem;
+}
+.boxb{
+  padding-left: 0.4rem;
+}
+.boxd{
+  padding-left: 0.4rem;
+}
+}
 </style>
