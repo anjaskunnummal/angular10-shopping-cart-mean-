@@ -23,7 +23,7 @@ const app = express();
 ///////////////////////////////////////
 // Create link to Angular build directory
 
-app.use('/', express.static(path.join(__dirname, '../dist')));
+app.use(express.static(path.join(__dirname, '../dist')));
 ///////////////////////////////////////
 app.use(express.static('public'));
 app.use(bodyParser.json());
