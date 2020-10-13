@@ -22,7 +22,7 @@ const products = require ('./routes/products')
 const app = express();
 ///////////////////////////////////////
 // Create link to Angular build directory
-var distDir = __dirname + "/dist/";
+var distDir = __dirname + "../dist/";
 app.use(express.static(distDir));
 ///////////////////////////////////////
 app.use(express.static('public'));
