@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const mongoose = require('mongoose');
 const cors = require ('cors');
-//const path = require ("path");
+const path = require ("path");
 const bodyParser = require ('body-parser');
 dataBaseConfig = require('./database/db');
 mongoose.Promise = global.Promise;
@@ -22,8 +22,8 @@ const products = require ('./routes/products')
 const app = express();
 ///////////////////////////////////////
 // Create link to Angular build directory
-var distDir = __dirname + "../dist/";
-app.use(express.static(distDir));
+
+app.use('/', express.static(path.join(__dirname, '../dist')));
 ///////////////////////////////////////
 app.use(express.static('public'));
 app.use(bodyParser.json());
