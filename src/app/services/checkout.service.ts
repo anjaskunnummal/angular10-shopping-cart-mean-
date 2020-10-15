@@ -13,10 +13,10 @@ export class CheckoutService {
 constructor(private http: HttpClient) { }
 
 AddCheckout(data:Checkout):Observable<any>{
-  let API_URL = `${this.endpoint}/add-checkout`;
+  let API_URL = `/add-checkout`;
   return this.http.post(API_URL,data);
 }
 GetCheckout():Observable<Checkout[]>{
-  return this.http.get<Checkout[]>(`${this.endpoint}/get-address`)
+  return this.http.get<Checkout[]>(`/get-address`)
 }
 }

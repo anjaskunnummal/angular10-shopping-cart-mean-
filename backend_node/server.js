@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const mongoose = require('mongoose');
 const cors = require ('cors');
-//const path = require ("path");
+const path = require ("path");
 const bodyParser = require ('body-parser');
 dataBaseConfig = require('./database/db');
 mongoose.Promise = global.Promise;
@@ -20,19 +20,21 @@ mongoose.connect(process.env.MONGO_URL||dataBaseConfig.db, {
 const products = require ('./routes/products')
 //const dataPath = "./data/data.json";
 const app = express();
-////////////////////////////////////////////
-////////////////////////////////////////////
-app.use(express.static(__dirname+"../dist/"));
-/////////////////////////////////////////////
-////////////////////////////////////////////
 app.use(express.static('public'));
+///////////////////////////////////////
+/*app.use((express.static(__dirname+"../dist/test")));*/
+/*app.get('/',(req,res)=>{
+  res.sendFile(path.join(__dirname+'../dist/test/index.html'))
+})*/
+var distDir = __dirname + "../dist/";
+app.use(express.static(distDir));
+/////////////////////////////////////
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(cors());
-const PORT = process.env.PORT || 3000
-app.listen(PORT,()=>
+app.listen(process.env.PORT || 3000,()=>
 {
     console.log("server running on port 3000 ")
 })

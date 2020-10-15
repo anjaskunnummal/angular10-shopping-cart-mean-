@@ -40,7 +40,7 @@ router.route('/add-checkout').post((req,res,next)=>{
 })
 
 //Get All Item From Cart
- router.route('/').get((req, res) => {
+ router.route('/get-cartitem').get((req, res) => {
     Cart.find((error, data) => {
       if (error) {
         return next(error)
