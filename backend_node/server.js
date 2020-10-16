@@ -26,8 +26,13 @@ app.use(express.static('public'));
 /*app.get('/',(req,res)=>{
   res.sendFile(path.join(__dirname+'../dist/test/index.html'))
 })*/
-var distDir = __dirname + "../dist/";
-app.use(express.static(distDir));
+/*var distDir = __dirname + "../dist/";
+app.use(express.static(distDir));*/
+app.use(express.static(path.join(__dirname, '../dist/test')));
+/*app.get('/', express.static(path.join(__dirname, '../dist/test')));*/
+app.get('/*',(req,res)=>{
+  res.sendFile(path.join(__dirname+'../dist/test/index.html'))
+})
 /////////////////////////////////////
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

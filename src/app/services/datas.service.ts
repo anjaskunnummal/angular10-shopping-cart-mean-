@@ -15,30 +15,30 @@ export class DatasService {
 
 constructor(private http: HttpClient) { }
 GetProperties():Observable<serverResponse[]> {
-  return this.http.get<serverResponse[]>(`/mobiles`);
+  return this.http.get<serverResponse[]>(`${this.endpoint}/mobiles`);
 }
 /*addProductToCart(cart_items: any) {
   localStorage.setItem("cart", JSON.stringify(cart_items));
 }*/
 GetFashion():Observable<Properties[]> {
-  return this.http.get<Properties[]>(`/fashions`);
+  return this.http.get<Properties[]>(`${this.endpoint}/fashions`);
 }
 /*getProductFromCart() {
   return JSON.parse(localStorage.getItem("cart"));
 }*/
 AddTocart(data:Properties[]): Observable<any> {
-  let API_URL = `/add-cart`;
+  let API_URL = `${this.endpoint}/add-cart`;
   return this.http.post(API_URL, data);
  
 }
 GetCartItem():Observable<Properties[]> {
-  return this.http.get<Properties[]>(`/get-cartitem`);
+  return this.http.get<Properties[]>(`${this.endpoint}/get-cartitem`);
 }
 DeleteCart(id): Observable<any> {
-  var API_URL = `/delete-cartItem/${id}`;
+  var API_URL = `${this.endpoint}/delete-cartItem/${id}`;
   return this.http.delete(API_URL)
 }
 GetCartLength():Observable<CartModelServer>{
-  return this.http.get<CartModelServer>(`/cart-length`);
+  return this.http.get<CartModelServer>(`${this.endpoint}/cart-length`);
 }
 }
