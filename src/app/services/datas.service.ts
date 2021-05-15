@@ -26,6 +26,7 @@ GetFashion():Observable<Properties[]> {
 /*getProductFromCart() {
   return JSON.parse(localStorage.getItem("cart"));
 }*/
+  
 AddTocart(data:Properties[]): Observable<any> {
   let API_URL = `${this.endpoint}/add-cart`;
   return this.http.post(API_URL, data);
