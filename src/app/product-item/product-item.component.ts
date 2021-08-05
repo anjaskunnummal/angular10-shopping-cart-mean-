@@ -12,27 +12,27 @@ export class ProductItemComponent implements OnInit {
   productImages:any=[{
     name:"Mobiles",
     image:"https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    routerLink: ['/mobiles']
+    routerLink: ['/mobiles-list']
   },
 {
    name:"Fashion",
    image:"https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-   routerLink: ['/fashions']
+   routerLink: ['/fashions-list']
 },
 {
 name:"Electronics",
 image:"https://images.pexels.com/photos/1841841/pexels-photo-1841841.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-routerLink: ['/mobiles']
+routerLink: ['/mobiles-list']
 },
 {
   name:"Appliances",
   image:"https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-  routerLink: ['/mobiles']
+  routerLink: ['/mobiles-list']
   },
   {
     name:"Sports",
     image:"https://images.pexels.com/photos/102448/pexels-photo-102448.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    routerLink: ['/mobiles']
+    routerLink: ['/mobiles-list']
     }
 ]
 
