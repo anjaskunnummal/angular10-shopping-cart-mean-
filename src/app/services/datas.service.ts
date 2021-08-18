@@ -10,7 +10,7 @@ import { Checkout } from '../models/checkout.model';
   providedIn: 'root'
 })
 export class DatasService {
-  endpoint: string = 'http://localhost:3000';
+  endpoint: string = 'https://nameless-peak-95200.herokuapp.com';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
 constructor(private http: HttpClient) { }
